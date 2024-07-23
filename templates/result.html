@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados del Análisis CSV</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Resultados del Análisis CSV</h1>
+    <h2>Primeras 5 filas:</h2>
+    {{ data | safe }}
+    <h2>Estadísticas descriptivas:</h2>
+    {{ stats | safe }}
+    <a href="{{ url_for('download_csv') }}">Descargar CSV procesado</a>
+    <br>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>
