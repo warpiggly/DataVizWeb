@@ -12,6 +12,15 @@
     {{ data | safe }}
     <h2>Estadísticas descriptivas:</h2>
     {{ stats | safe }}
+    <h2>Gráfico</h2>
+    <img src="{{ url_for('plot') }}">
+
+    <h2>Gráfico</h2>
+    {{ cat_summary | safe }}
+    {{ num_summary | safe }}
+    {{ null_summary | safe }}
+
+
     <a href="{{ url_for('download_csv') }}">Descargar CSV procesado</a>
     <br>
     <a href="/">Volver al inicio</a>
